@@ -1,515 +1,96 @@
-module.exports =
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "fb15");
-/******/ })
-/************************************************************************/
-/******/ ({
+/******/ (function() { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
 
-/***/ "1a60":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = ({
-  cssClass: {
-    type: String,
-    default: ''
-  },
-  cssStyle: {
-    type: Object,
-    default: function _default() {
-      return {};
-    }
-  },
-  overlayStyle: {
-    type: Object,
-    default: function _default() {
-      return {};
-    }
-  },
-  component: {
-    type: [Object, Boolean, Function],
-    default: false
-  },
-  componentStyle: {
-    type: Object,
-    default: function _default() {
-      return {};
-    }
-  },
-  componentProps: {
-    type: Object,
-    default: function _default() {
-      return {};
-    }
-  },
-  assetWrapperStyle: {
-    type: Object,
-    default: function _default() {
-      return {};
-    }
-  },
-  assetSrc: {
-    type: String,
-    default: ''
-  },
-  assetStyle: {
-    type: Object,
-    default: function _default() {
-      return {};
-    }
-  },
-  text: {
-    type: String,
-    default: ''
-  },
-  textStyle: {
-    type: Object,
-    default: function _default() {
-      return {};
-    }
-  },
-  html: {
-    type: String,
-    default: ''
-  },
-  htmlStyle: {
-    type: Object,
-    default: function _default() {
-      return {};
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "62e4":
+/***/ 679:
 /***/ (function(module, exports) {
 
-module.exports = function(module) {
-	if (!module.webpackPolyfill) {
-		module.deprecate = function() {};
-		module.paths = [];
-		// module.parent = undefined by default
-		if (!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// addapted from the document.currentScript polyfill by Adam Miller
+// MIT license
+// source: https://github.com/amiller-gh/currentScript-polyfill
 
+// added support for Firefox https://bugzilla.mozilla.org/show_bug.cgi?id=1620505
 
-/***/ }),
+(function (root, factory) {
+  if (true) {
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+		__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+		(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else {}
+}(typeof self !== 'undefined' ? self : this, function () {
+  function getCurrentScript () {
+    var descriptor = Object.getOwnPropertyDescriptor(document, 'currentScript')
+    // for chrome
+    if (!descriptor && 'currentScript' in document && document.currentScript) {
+      return document.currentScript
+    }
 
-/***/ "8bbf":
-/***/ (function(module, exports) {
-
-module.exports = require("vue");
-
-/***/ }),
-
-/***/ "b7a6":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_8_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Preloader_vue_vue_type_style_index_0_id_a999be66_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("d843");
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_8_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Preloader_vue_vue_type_style_index_0_id_a999be66_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_8_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Preloader_vue_vue_type_style_index_0_id_a999be66_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
- /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_dist_cjs_js_ref_8_oneOf_1_3_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Preloader_vue_vue_type_style_index_0_id_a999be66_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-
-/***/ "c8ba":
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || new Function("return this")();
-} catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-
-/***/ "ce96":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-// EXTERNAL MODULE: ./node_modules/lodash.merge/index.js
-var lodash_merge = __webpack_require__("da81");
-var lodash_merge_default = /*#__PURE__*/__webpack_require__.n(lodash_merge);
-
-// CONCATENATED MODULE: ./src/helpers/global.js
-
-var exeption = {
-  error: function error(_error) {
-    throw new TypeError(_error);
-  },
-  warn: function warn(error) {
-    console.warn("[vue-preloaders] - ".concat(error));
-  }
-};
-var helpers = {
-  exeption: exeption,
-  deepMerge: lodash_merge_default.a
-};
-/* harmony default export */ var global = (helpers);
-// EXTERNAL MODULE: ./src/consts/props.js
-var props = __webpack_require__("1a60");
-
-// CONCATENATED MODULE: ./src/helpers/local.js
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-/* harmony default export */ var local = ({
-  // take options and parse then so that each key that is in options and in props will be pushed into props object.
-  getParsedOptions: function getParsedOptions(userOptions) {
-    var options = {};
-    Object.entries(userOptions).forEach(function (entry) {
-      var _entry = _slicedToArray(entry, 2),
-          key = _entry[0],
-          value = _entry[1];
-
-      if (key in props["a" /* default */]) {
-        if (!('props' in options)) {
-          options.props = {};
-        }
-
-        options.props[key] = value;
-      } else {
-        options[key] = value;
+    // for other browsers with native support for currentScript
+    if (descriptor && descriptor.get !== getCurrentScript && document.currentScript) {
+      return document.currentScript
+    }
+  
+    // IE 8-10 support script readyState
+    // IE 11+ & Firefox support stack trace
+    try {
+      throw new Error();
+    }
+    catch (err) {
+      // Find the second match for the "at" string to get file src url from stack.
+      var ieStackRegExp = /.*at [^(]*\((.*):(.+):(.+)\)$/ig,
+        ffStackRegExp = /@([^@]*):(\d+):(\d+)\s*$/ig,
+        stackDetails = ieStackRegExp.exec(err.stack) || ffStackRegExp.exec(err.stack),
+        scriptLocation = (stackDetails && stackDetails[1]) || false,
+        line = (stackDetails && stackDetails[2]) || false,
+        currentLocation = document.location.href.replace(document.location.hash, ''),
+        pageSource,
+        inlineScriptSourceRegExp,
+        inlineScriptSource,
+        scripts = document.getElementsByTagName('script'); // Live NodeList collection
+  
+      if (scriptLocation === currentLocation) {
+        pageSource = document.documentElement.outerHTML;
+        inlineScriptSourceRegExp = new RegExp('(?:[^\\n]+?\\n){0,' + (line - 2) + '}[^<]*<script>([\\d\\D]*?)<\\/script>[\\d\\D]*', 'i');
+        inlineScriptSource = pageSource.replace(inlineScriptSourceRegExp, '$1').trim();
       }
-    });
-    return options;
-  },
-  getContainer: function getContainer(container) {
-    // if container is NOT DOM element
-    if (typeof Element !== 'undefined' && !(container instanceof Element)) {
-      // if no document
-      if (typeof document === 'undefined') {
-        return global.exeption.warn('Document is not defined');
-      } // if no container
-
-
-      if (!container) {
-        // take body as container
-        container = document.body; // if container is a string
-      } else if (typeof container === 'string') {
-        container = document.querySelector(container); // if queryselector container not found
-
-        if (!container) {
-          // take body as container
-          container = document.querySelector('body');
-          global.exeption.warn('Container not found. Fallback to document.body');
+  
+      for (var i = 0; i < scripts.length; i++) {
+        // If ready state is interactive, return the script tag
+        if (scripts[i].readyState === 'interactive') {
+          return scripts[i];
         }
-      } else {
-        return global.exeption.warn('Container must be dom element OR query selector string');
+  
+        // If src matches, return the script tag
+        if (scripts[i].src === scriptLocation) {
+          return scripts[i];
+        }
+  
+        // If inline source matches, return the script tag
+        if (
+          scriptLocation === currentLocation &&
+          scripts[i].innerHTML &&
+          scripts[i].innerHTML.trim() === inlineScriptSource
+        ) {
+          return scripts[i];
+        }
       }
-    }
-
-    return container;
-  }
-});
-// CONCATENATED MODULE: ./src/helpers/index.js
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-/* harmony default export */ var src_helpers = __webpack_exports__["a"] = (_objectSpread(_objectSpread({}, global), local));
-
-/***/ }),
-
-/***/ "d75a":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("ce96");
-/* harmony import */ var _components_Preloader_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("f152");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("8bbf");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_2__);
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-
-function preloaders() {
-  var userDefaultOptions = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  // initiate loaders object if not exist
-  userDefaultOptions.loaders = userDefaultOptions.loaders || {}; // get default loader
-
-  var defaultLoaderOptions = userDefaultOptions.loaders[userDefaultOptions.loader]; // error if default loader declared but not found
-
-  if (userDefaultOptions.loader && !defaultLoaderOptions) {
-    return _helpers__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].exeption.wran('Default loader not found in loaders');
-  } // parse user default options with default loader options
-
-
-  var defaultOptions = _helpers__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].deepMerge({}, _helpers__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].getParsedOptions(userDefaultOptions), // user default options
-  _helpers__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].getParsedOptions(defaultLoaderOptions || {}) // default loader options
-  );
-  return {
-    open: function open() {
-      var _this = this;
-
-      var userOptions = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
-      // if server - abort and return close callback (to save from throwing error firing the callback that comes from .open())
-      if (process && process.server) {
-        return function () {};
-      } // parse options
-
-
-      var options = _helpers__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].deepMerge({}, defaultOptions, // default options
-      _helpers__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].getParsedOptions(defaultOptions.loaders[userOptions.loader] || {}), // users [chosen loader] options
-      _helpers__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].getParsedOptions(userOptions) // user options
-      ); // get container
-
-      var container = _helpers__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].getContainer(options.container);
-      if (!container) return _helpers__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].exeption.warn('Container not found'); // get controller (the object that's injected to the dom element to manipulate its loader)
-
-      var containerController = container.$preloaders || {}; // get container's css position
-
-      var _window$getComputedSt = window.getComputedStyle(container),
-          containerCssPosition = _window$getComputedSt.position; // set position change flag
-
-
-      var isPositionChanged = !!containerController.isPositionChanged; // if current position is static
-
-      if (containerCssPosition === 'static') {
-        // set to relative
-        container.style.position = 'relative'; // set flag
-
-        isPositionChanged = true;
-      } // if loader already initialized - if controller in container
-
-
-      if ('$preloaders' in container) {
-        // pass props if exists
-        if (options.props) {
-          Object.entries(options.props).forEach(function (entry) {
-            var _entry = _slicedToArray(entry, 2),
-                key = _entry[0],
-                value = _entry[1];
-
-            containerController.props[key] = value;
-          });
-        } //set position changed flag
-
-
-        containerController.isPositionChanged = isPositionChanged; // if loader needs initialization
-      } else {
-        // extend loader
-        var loaderConstructor = vue__WEBPACK_IMPORTED_MODULE_2___default.a.extend(_components_Preloader_vue__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"]); // pass props
-
-        var loaderInstance = new loaderConstructor({
-          propsData: options.props
-        }); // mount
-
-        loaderInstance.$mount(); // init controller
-
-        containerController = {
-          open: function open() {
-            loaderInstance.isOpen = true;
-          },
-          close: function close() {
-            loaderInstance.isOpen = false;
-            return new Promise(function (resolve) {
-              if (loaderInstance.isTransitionDone) resolve();
-            });
-          },
-          isPositionChanged: isPositionChanged,
-          props: loaderInstance.$props
-        }; // set controller to container
-
-        container.$preloaders = containerController; // append loader
-
-        container.appendChild(loaderInstance.$el);
-      } // open loader
-
-
-      containerController.open(); // return closing callback for loader
-
-      return function () {
-        _this.close({
-          container: container
-        });
-      };
-    },
-    close: function close() {
-      var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-          userContainer = _ref.container;
-
-      // get container
-      var container = _helpers__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].getContainer(userContainer || defaultOptions.container);
-      if (!container) return _helpers__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].exeption.warn('Container not found'); // get controller
-
-      var containerController = container.$preloaders; // handle close of never-opened container
-
-      if (!containerController) return _helpers__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].exeption.warn('Preloader has not been initiated (.open())'); // close
-
-      containerController.close().then(function () {
-        // reset position after transition out
-        if (containerController.isPositionChanged && container.style.position === 'relative') {
-          // reset position
-          container.style.position = ''; // reset flag
-
-          containerController.isPositionChanged = false;
-        }
-      });
+  
+      // If no match, return null
+      return null;
     }
   };
-}
 
-/* harmony default export */ __webpack_exports__["a"] = (preloaders);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("f28c")))
+  return getCurrentScript
+}));
 
-/***/ }),
-
-/***/ "d843":
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ "da81":
+/***/ 378:
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global, module) {/**
+/* module decorator */ module = __webpack_require__.nmd(module);
+/**
  * Lodash (Custom Build) <https://lodash.com/>
  * Build: `lodash modularize exports="npm" -o ./`
  * Copyright OpenJS Foundation and other contributors <https://openjsf.org/>
@@ -592,7 +173,7 @@ typedArrayTags[setTag] = typedArrayTags[stringTag] =
 typedArrayTags[weakMapTag] = false;
 
 /** Detect free variable `global` from Node.js. */
-var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+var freeGlobal = typeof __webpack_require__.g == 'object' && __webpack_require__.g && __webpack_require__.g.Object === Object && __webpack_require__.g;
 
 /** Detect free variable `self`. */
 var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
@@ -604,7 +185,7 @@ var root = freeGlobal || freeSelf || Function('return this')();
 var freeExports =  true && exports && !exports.nodeType && exports;
 
 /** Detect free variable `module`. */
-var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
+var freeModule = freeExports && "object" == 'object' && module && !module.nodeType && module;
 
 /** Detect the popular CommonJS extension `module.exports`. */
 var moduleExports = freeModule && freeModule.exports === freeExports;
@@ -2487,46 +2068,376 @@ function stubFalse() {
 
 module.exports = merge;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("c8ba"), __webpack_require__("62e4")(module)))
 
 /***/ }),
 
-/***/ "f152":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ 744:
+/***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
+var __webpack_unused_export__;
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"ffe7dfa4-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Preloader.vue?vue&type=template&id=a999be66&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition',{attrs:{"name":"preloaders"},on:{"afterLeave":function($event){_vm.isTransitionDone = true}}},[(_vm.isOpen)?_c('span',{class:[ 'preloaders', _vm.cssClass ],style:(_vm.cssStyle)},[_c('span',{staticClass:"preloaders-overlay",style:(_vm.overlayStyle)}),(_vm.component)?_c(_vm.component,_vm._b({tag:"component",staticClass:"preloaders-component",style:(_vm.componentStyle)},'component',_vm.componentProps,false)):_vm._e(),(_vm.assetSrc)?_c('span',{staticClass:"preloaders-asset-wrapper",style:(_vm.assetWrapperStyle)},[_c('img',{staticClass:"preloaders-asset",style:(_vm.assetStyle),attrs:{"src":_vm.assetSrc,"alt":"Loader","title":"Loader"}})]):_vm._e(),(_vm.text)?_c('span',{staticClass:"preloaders-text",style:(_vm.textStyle)},[_vm._v(_vm._s(_vm.text))]):_vm._e(),(_vm.html)?_c('span',{staticClass:"preloaders-html",style:(_vm.htmlStyle),domProps:{"innerHTML":_vm._s(_vm.html)}}):_vm._e()],1):_vm._e()])}
-var staticRenderFns = []
+__webpack_unused_export__ = ({ value: true });
+// runtime helper for setting properties on components
+// in a tree-shakable way
+exports.Z = (sfc, props) => {
+    const target = sfc.__vccOpts || sfc;
+    for (const [key, val] of props) {
+        target[key] = val;
+    }
+    return target;
+};
 
 
-// CONCATENATED MODULE: ./src/components/Preloader.vue?vue&type=template&id=a999be66&scoped=true&
+/***/ })
 
-// EXTERNAL MODULE: ./src/consts/props.js
-var props = __webpack_require__("1a60");
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			id: moduleId,
+/******/ 			loaded: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	!function() {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = function(module) {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				function() { return module['default']; } :
+/******/ 				function() { return module; };
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	!function() {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/node module decorator */
+/******/ 	!function() {
+/******/ 		__webpack_require__.nmd = function(module) {
+/******/ 			module.paths = [];
+/******/ 			if (!module.children) module.children = [];
+/******/ 			return module;
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	!function() {
+/******/ 		__webpack_require__.p = "";
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+!function() {
+"use strict";
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Preloader.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": function() { return /* binding */ entry_lib; }
+});
 
-/* harmony default export */ var Preloadervue_type_script_lang_js_ = ({
+;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
+/* eslint-disable no-var */
+// This file is imported into lib/wc client bundles.
+
+if (typeof window !== 'undefined') {
+  var currentScript = window.document.currentScript
+  if (true) {
+    var getCurrentScript = __webpack_require__(679)
+    currentScript = getCurrentScript()
+
+    // for backward compatibility, because previously we directly included the polyfill
+    if (!('currentScript' in document)) {
+      Object.defineProperty(document, 'currentScript', { get: getCurrentScript })
+    }
+  }
+
+  var src = currentScript && currentScript.src.match(/(.+\/)[^/]+\.js(\?.*)?$/)
+  if (src) {
+    __webpack_require__.p = src[1] // eslint-disable-line
+  }
+}
+
+// Indicate to webpack that this file can be concatenated
+/* harmony default export */ var setPublicPath = (null);
+
+// EXTERNAL MODULE: ./node_modules/lodash.merge/index.js
+var lodash_merge = __webpack_require__(378);
+var lodash_merge_default = /*#__PURE__*/__webpack_require__.n(lodash_merge);
+;// CONCATENATED MODULE: ./src/helpers/global.js
+
+var exeption = {
+  error: function error(_error) {
+    throw new TypeError(_error);
+  },
+  warn: function warn(error) {
+    console.warn("[vue-preloaders] - ".concat(error));
+  }
+};
+var helpers = {
+  exeption: exeption,
+  deepMerge: (lodash_merge_default())
+};
+/* harmony default export */ var global = (helpers);
+;// CONCATENATED MODULE: ./src/consts/props.js
+/* harmony default export */ var props = ({
+  cssClass: {
+    type: String,
+    default: ''
+  },
+  cssStyle: {
+    type: Object,
+    default: function _default() {
+      return {};
+    }
+  },
+  overlayStyle: {
+    type: Object,
+    default: function _default() {
+      return {};
+    }
+  },
+  component: {
+    type: [Object, Boolean, Function],
+    default: false
+  },
+  componentStyle: {
+    type: Object,
+    default: function _default() {
+      return {};
+    }
+  },
+  componentProps: {
+    type: Object,
+    default: function _default() {
+      return {};
+    }
+  },
+  assetWrapperStyle: {
+    type: Object,
+    default: function _default() {
+      return {};
+    }
+  },
+  assetSrc: {
+    type: String,
+    default: ''
+  },
+  assetStyle: {
+    type: Object,
+    default: function _default() {
+      return {};
+    }
+  },
+  text: {
+    type: String,
+    default: ''
+  },
+  textStyle: {
+    type: Object,
+    default: function _default() {
+      return {};
+    }
+  },
+  html: {
+    type: String,
+    default: ''
+  },
+  htmlStyle: {
+    type: Object,
+    default: function _default() {
+      return {};
+    }
+  }
+});
+;// CONCATENATED MODULE: ./src/helpers/local.js
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+/* harmony default export */ var local = ({
+  // take options and parse then so that each key that is in options and in props will be pushed into props object.
+  getParsedOptions: function getParsedOptions(userOptions) {
+    var options = {};
+    Object.entries(userOptions).forEach(function (entry) {
+      var _entry = _slicedToArray(entry, 2),
+          key = _entry[0],
+          value = _entry[1];
+
+      if (key in props) {
+        if (!('props' in options)) {
+          options.props = {};
+        }
+
+        options.props[key] = value;
+      } else {
+        options[key] = value;
+      }
+    });
+    return options;
+  },
+  getContainer: function getContainer(container) {
+    // if container is NOT DOM element
+    if (typeof Element !== 'undefined' && !(container instanceof Element)) {
+      // if no document
+      if (typeof document === 'undefined') {
+        return global.exeption.warn('Document is not defined');
+      } // if no container
+
+
+      if (!container) {
+        // take body as container
+        container = document.body; // if container is a string
+      } else if (typeof container === 'string') {
+        container = document.querySelector(container); // if queryselector container not found
+
+        if (!container) {
+          // take body as container
+          container = document.querySelector('body');
+          global.exeption.warn('Container not found. Fallback to document.body');
+        }
+      } else {
+        return global.exeption.warn('Container must be dom element OR query selector string');
+      }
+    }
+
+    return container;
+  }
+});
+;// CONCATENATED MODULE: ./src/helpers/index.js
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+/* harmony default export */ var src_helpers = (_objectSpread(_objectSpread({}, global), local));
+;// CONCATENATED MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
+var external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject = require("vue");
+var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject);
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/Preloader.vue?vue&type=template&id=11c15a46&scoped=true
+
+
+var _withScopeId = function _withScopeId(n) {
+  return _pushScopeId("data-v-11c15a46"), n = n(), _popScopeId(), n;
+};
+
+var _hoisted_1 = ["src"];
+var _hoisted_2 = ["innerHTML"];
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createBlock)(external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.Transition, {
+    name: "preloaders",
+    onAfterLeave: _cache[0] || (_cache[0] = function ($event) {
+      return $data.isTransitionDone = true;
+    })
+  }, {
+    default: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.withCtx)(function () {
+      return [$data.isOpen ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("span", {
+        key: 0,
+        class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeClass)(['preloaders', _ctx.cssClass]),
+        style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeStyle)(_ctx.cssStyle)
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("span", {
+        class: "preloaders-overlay",
+        style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeStyle)(_ctx.overlayStyle)
+      }, null, 4), _ctx.component ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createBlock)((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.resolveDynamicComponent)(_ctx.component), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.mergeProps)({
+        key: 0
+      }, _ctx.componentProps, {
+        class: "preloaders-component",
+        style: _ctx.componentStyle
+      }), null, 16, ["style"])) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true), _ctx.assetSrc ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("span", {
+        key: 1,
+        class: "preloaders-asset-wrapper",
+        style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeStyle)(_ctx.assetWrapperStyle)
+      }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementVNode)("img", {
+        class: "preloaders-asset",
+        src: _ctx.assetSrc,
+        style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeStyle)(_ctx.assetStyle),
+        alt: "Loader",
+        title: "Loader"
+      }, null, 12, _hoisted_1)], 4)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true), _ctx.text ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("span", {
+        key: 2,
+        class: "preloaders-text",
+        style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeStyle)(_ctx.textStyle)
+      }, (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.toDisplayString)(_ctx.text), 5)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true), _ctx.html ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("span", {
+        key: 3,
+        class: "preloaders-html",
+        style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeStyle)(_ctx.htmlStyle),
+        innerHTML: _ctx.html
+      }, null, 12, _hoisted_2)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true)], 6)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true)];
+    }),
+    _: 1
+  });
+}
+;// CONCATENATED MODULE: ./src/components/Preloader.vue?vue&type=template&id=11c15a46&scoped=true
+
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/Preloader.vue?vue&type=script&lang=js
+
+/* harmony default export */ var Preloadervue_type_script_lang_js = ({
   name: 'Preloaders',
-  props: props["a" /* default */],
+  props: props,
   data: function data() {
     return {
       isOpen: false,
@@ -2539,410 +2450,186 @@ var props = __webpack_require__("1a60");
     }
   }
 });
-// CONCATENATED MODULE: ./src/components/Preloader.vue?vue&type=script&lang=js&
- /* harmony default export */ var components_Preloadervue_type_script_lang_js_ = (Preloadervue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/components/Preloader.vue?vue&type=style&index=0&id=a999be66&lang=scss&scoped=true&
-var Preloadervue_type_style_index_0_id_a999be66_lang_scss_scoped_true_ = __webpack_require__("b7a6");
+;// CONCATENATED MODULE: ./src/components/Preloader.vue?vue&type=script&lang=js
+ 
+;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/Preloader.vue?vue&type=style&index=0&id=11c15a46&scoped=true&lang=css
+// extracted by mini-css-extract-plugin
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
-/* globals __VUE_SSR_CONTEXT__ */
+;// CONCATENATED MODULE: ./src/components/Preloader.vue?vue&type=style&index=0&id=11c15a46&scoped=true&lang=css
 
-// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
-// This module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle.
+// EXTERNAL MODULE: ./node_modules/vue-loader/dist/exportHelper.js
+var exportHelper = __webpack_require__(744);
+;// CONCATENATED MODULE: ./src/components/Preloader.vue
 
-function normalizeComponent (
-  scriptExports,
-  render,
-  staticRenderFns,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
-) {
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
 
-  // render functions
-  if (render) {
-    options.render = render
-    options.staticRenderFns = staticRenderFns
-    options._compiled = true
-  }
 
-  // functional template
-  if (functionalTemplate) {
-    options.functional = true
-  }
 
-  // scopedId
-  if (scopeId) {
-    options._scopeId = 'data-v-' + scopeId
-  }
+;
 
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = shadowMode
-      ? function () {
-        injectStyles.call(
-          this,
-          (options.functional ? this.parent : this).$root.$options.shadowRoot
-        )
-      }
-      : injectStyles
-  }
 
-  if (hook) {
-    if (options.functional) {
-      // for template-only hot-reload because in that case the render fn doesn't
-      // go through the normalizer
-      options._injectStyles = hook
-      // register for functional component in vue file
-      var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return originalRender(h, context)
-      }
-    } else {
-      // inject component registration as beforeCreate hook
-      var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    }
-  }
+const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(Preloadervue_type_script_lang_js, [['render',render],['__scopeId',"data-v-11c15a46"]])
 
+/* harmony default export */ var Preloader = (__exports__);
+;// CONCATENATED MODULE: ./src/lib/index.js
+function lib_slicedToArray(arr, i) { return lib_arrayWithHoles(arr) || lib_iterableToArrayLimit(arr, i) || lib_unsupportedIterableToArray(arr, i) || lib_nonIterableRest(); }
+
+function lib_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function lib_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return lib_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return lib_arrayLikeToArray(o, minLen); }
+
+function lib_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function lib_iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function lib_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+function preloaders() {
+  var userDefaultOptions = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  // initiate loaders object if not exist
+  userDefaultOptions.loaders = userDefaultOptions.loaders || {}; // get default loader
+
+  var defaultLoaderOptions = userDefaultOptions.loaders[userDefaultOptions.loader]; // error if default loader declared but not found
+
+  if (userDefaultOptions.loader && !defaultLoaderOptions) {
+    return src_helpers.exeption.wran('Default loader not found in loaders');
+  } // parse user default options with default loader options
+
+
+  var defaultOptions = src_helpers.deepMerge({}, src_helpers.getParsedOptions(userDefaultOptions), // user default options
+  src_helpers.getParsedOptions(defaultLoaderOptions || {}) // default loader options
+  );
   return {
-    exports: scriptExports,
-    options: options
-  }
-}
+    open: function open() {
+      var _this = this;
 
-// CONCATENATED MODULE: ./src/components/Preloader.vue
+      var userOptions = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+      // if server - abort and return close callback (to save from throwing error firing the callback that comes from .open())
+      if (process && process.server) {
+        return function () {};
+      } // parse options
 
 
+      var options = src_helpers.deepMerge({}, defaultOptions, // default options
+      src_helpers.getParsedOptions(defaultOptions.loaders[userOptions.loader] || {}), // users [chosen loader] options
+      src_helpers.getParsedOptions(userOptions) // user options
+      ); // get container
+
+      var container = src_helpers.getContainer(options.container);
+      if (!container) return src_helpers.exeption.warn('Container not found'); // get controller (the object that's injected to the dom element to manipulate its loader)
+
+      var containerController = container.$preloaders || {}; // get container's css position
+
+      var _window$getComputedSt = window.getComputedStyle(container),
+          containerCssPosition = _window$getComputedSt.position; // set position change flag
 
 
+      var isPositionChanged = !!containerController.isPositionChanged; // if current position is static
+
+      if (containerCssPosition === 'static') {
+        // set to relative
+        container.style.position = 'relative'; // set flag
+
+        isPositionChanged = true;
+      } // if loader already initialized - if controller in container
 
 
-/* normalize component */
+      if ('$preloaders' in container) {
+        // pass props if exists
+        if (options.props) {
+          Object.entries(options.props).forEach(function (entry) {
+            var _entry = lib_slicedToArray(entry, 2),
+                key = _entry[0],
+                value = _entry[1];
 
-var component = normalizeComponent(
-  components_Preloadervue_type_script_lang_js_,
-  render,
-  staticRenderFns,
-  false,
-  null,
-  "a999be66",
-  null
-  
-)
+            containerController.props[key] = value;
+          });
+        } //set position changed flag
 
-/* harmony default export */ var Preloader = __webpack_exports__["a"] = (component.exports);
 
-/***/ }),
+        containerController.isPositionChanged = isPositionChanged; // if loader needs initialization
+      } else {
+        // extend loader
+        var loaderConstructor = external_commonjs_vue_commonjs2_vue_root_Vue_default().extend(Preloader); // pass props
 
-/***/ "f28c":
-/***/ (function(module, exports) {
+        var loaderInstance = new loaderConstructor({
+          propsData: options.props
+        }); // mount
 
-// shim for using process in browser
-var process = module.exports = {};
+        loaderInstance.$mount(); // init controller
 
-// cached from whatever global is present so that test runners that stub it
-// don't break things.  But we need to wrap it in a try catch in case it is
-// wrapped in strict mode code which doesn't define any globals.  It's inside a
-// function because try/catches deoptimize in certain engines.
+        containerController = {
+          open: function open() {
+            loaderInstance.isOpen = true;
+          },
+          close: function close() {
+            loaderInstance.isOpen = false;
+            return new Promise(function (resolve) {
+              if (loaderInstance.isTransitionDone) resolve();
+            });
+          },
+          isPositionChanged: isPositionChanged,
+          props: loaderInstance.$props
+        }; // set controller to container
 
-var cachedSetTimeout;
-var cachedClearTimeout;
+        container.$preloaders = containerController; // append loader
 
-function defaultSetTimout() {
-    throw new Error('setTimeout has not been defined');
-}
-function defaultClearTimeout () {
-    throw new Error('clearTimeout has not been defined');
-}
-(function () {
-    try {
-        if (typeof setTimeout === 'function') {
-            cachedSetTimeout = setTimeout;
-        } else {
-            cachedSetTimeout = defaultSetTimout;
+        container.appendChild(loaderInstance.$el);
+      } // open loader
+
+
+      containerController.open(); // return closing callback for loader
+
+      return function () {
+        _this.close({
+          container: container
+        });
+      };
+    },
+    close: function close() {
+      var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+          userContainer = _ref.container;
+
+      // get container
+      var container = src_helpers.getContainer(userContainer || defaultOptions.container);
+      if (!container) return src_helpers.exeption.warn('Container not found'); // get controller
+
+      var containerController = container.$preloaders; // handle close of never-opened container
+
+      if (!containerController) return src_helpers.exeption.warn('Preloader has not been initiated (.open())'); // close
+
+      containerController.close().then(function () {
+        // reset position after transition out
+        if (containerController.isPositionChanged && container.style.position === 'relative') {
+          // reset position
+          container.style.position = ''; // reset flag
+
+          containerController.isPositionChanged = false;
         }
-    } catch (e) {
-        cachedSetTimeout = defaultSetTimout;
+      });
     }
-    try {
-        if (typeof clearTimeout === 'function') {
-            cachedClearTimeout = clearTimeout;
-        } else {
-            cachedClearTimeout = defaultClearTimeout;
-        }
-    } catch (e) {
-        cachedClearTimeout = defaultClearTimeout;
-    }
-} ())
-function runTimeout(fun) {
-    if (cachedSetTimeout === setTimeout) {
-        //normal enviroments in sane situations
-        return setTimeout(fun, 0);
-    }
-    // if setTimeout wasn't available but was latter defined
-    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-        cachedSetTimeout = setTimeout;
-        return setTimeout(fun, 0);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedSetTimeout(fun, 0);
-    } catch(e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
-            return cachedSetTimeout.call(null, fun, 0);
-        } catch(e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
-            return cachedSetTimeout.call(this, fun, 0);
-        }
-    }
-
-
-}
-function runClearTimeout(marker) {
-    if (cachedClearTimeout === clearTimeout) {
-        //normal enviroments in sane situations
-        return clearTimeout(marker);
-    }
-    // if clearTimeout wasn't available but was latter defined
-    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-        cachedClearTimeout = clearTimeout;
-        return clearTimeout(marker);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedClearTimeout(marker);
-    } catch (e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
-            return cachedClearTimeout.call(null, marker);
-        } catch (e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
-            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
-            return cachedClearTimeout.call(this, marker);
-        }
-    }
-
-
-
-}
-var queue = [];
-var draining = false;
-var currentQueue;
-var queueIndex = -1;
-
-function cleanUpNextTick() {
-    if (!draining || !currentQueue) {
-        return;
-    }
-    draining = false;
-    if (currentQueue.length) {
-        queue = currentQueue.concat(queue);
-    } else {
-        queueIndex = -1;
-    }
-    if (queue.length) {
-        drainQueue();
-    }
+  };
 }
 
-function drainQueue() {
-    if (draining) {
-        return;
-    }
-    var timeout = runTimeout(cleanUpNextTick);
-    draining = true;
-
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        while (++queueIndex < len) {
-            if (currentQueue) {
-                currentQueue[queueIndex].run();
-            }
-        }
-        queueIndex = -1;
-        len = queue.length;
-    }
-    currentQueue = null;
-    draining = false;
-    runClearTimeout(timeout);
-}
-
-process.nextTick = function (fun) {
-    var args = new Array(arguments.length - 1);
-    if (arguments.length > 1) {
-        for (var i = 1; i < arguments.length; i++) {
-            args[i - 1] = arguments[i];
-        }
-    }
-    queue.push(new Item(fun, args));
-    if (queue.length === 1 && !draining) {
-        runTimeout(drainQueue);
-    }
-};
-
-// v8 likes predictible objects
-function Item(fun, array) {
-    this.fun = fun;
-    this.array = array;
-}
-Item.prototype.run = function () {
-    this.fun.apply(null, this.array);
-};
-process.title = 'browser';
-process.browser = true;
-process.env = {};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-process.versions = {};
-
-function noop() {}
-
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-process.prependListener = noop;
-process.prependOnceListener = noop;
-
-process.listeners = function (name) { return [] }
-
-process.binding = function (name) {
-    throw new Error('process.binding is not supported');
-};
-
-process.cwd = function () { return '/' };
-process.chdir = function (dir) {
-    throw new Error('process.chdir is not supported');
-};
-process.umask = function() { return 0; };
-
-
-/***/ }),
-
-/***/ "f6fd":
-/***/ (function(module, exports) {
-
-// document.currentScript polyfill by Adam Miller
-
-// MIT license
-
-(function(document){
-  var currentScript = "currentScript",
-      scripts = document.getElementsByTagName('script'); // Live NodeList collection
-
-  // If browser needs currentScript polyfill, add get currentScript() to the document object
-  if (!(currentScript in document)) {
-    Object.defineProperty(document, currentScript, {
-      get: function(){
-
-        // IE 6-10 supports script readyState
-        // IE 10+ support stack trace
-        try { throw new Error(); }
-        catch (err) {
-
-          // Find the second match for the "at" string to get file src url from stack.
-          // Specifically works with the format of stack traces in IE.
-          var i, res = ((/.*at [^\(]*\((.*):.+:.+\)$/ig).exec(err.stack) || [false])[1];
-
-          // For all scripts on the page, if src matches or if ready state is interactive, return the script tag
-          for(i in scripts){
-            if(scripts[i].src == res || scripts[i].readyState == "interactive"){
-              return scripts[i];
-            }
-          }
-
-          // If no match, return null
-          return null;
-        }
-      }
-    });
-  }
-})(document);
-
-
-/***/ }),
-
-/***/ "fb15":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
-// This file is imported into lib/wc client bundles.
-
-if (typeof window !== 'undefined') {
-  if (true) {
-    __webpack_require__("f6fd")
-  }
-
-  var i
-  if ((i = window.document.currentScript) && (i = i.src.match(/(.+\/)[^/]+\.js(\?.*)?$/))) {
-    __webpack_require__.p = i[1] // eslint-disable-line
-  }
-}
-
-// Indicate to webpack that this file can be concatenated
-/* harmony default export */ var setPublicPath = (null);
-
-// EXTERNAL MODULE: ./src/lib/index.js
-var lib = __webpack_require__("d75a");
-
-// CONCATENATED MODULE: ./src/lib/vue-plugin.js
+/* harmony default export */ var lib = (preloaders);
+;// CONCATENATED MODULE: ./src/lib/vue-plugin.js
 
 /* harmony default export */ var vue_plugin = ({
   install: function install(Vue, userDefaultOptions) {
-    Vue.prototype.$preloaders = Object(lib["a" /* default */])(userDefaultOptions);
+    Vue.prototype.$preloaders = lib(userDefaultOptions);
   }
 });
-// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
+;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
 
-/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (vue_plugin);
+/* harmony default export */ var entry_lib = (vue_plugin);
 
 
-
-/***/ })
-
-/******/ })["default"];
+}();
+module.exports = __webpack_exports__["default"];
+/******/ })()
+;

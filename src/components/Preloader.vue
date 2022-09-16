@@ -34,7 +34,7 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
     .preloaders {
         overflow: hidden;
         display: flex;
@@ -59,7 +59,6 @@
         height: 100%;
     }
 
-    // Transitions
     .preloaders-enter-active, .preloaders-leave-active {
         transition: opacity 150ms;
     }
